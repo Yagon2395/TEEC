@@ -1,6 +1,6 @@
 library("RSNNS")
 #usada para gerar matrix de confusao
-library(SDMTools)
+library("SDMTools")
 dados <- read.csv(file = "classificado3.csv",sep = ",")
 N <- dim(dados)[1]
 indElementosEmbaralhados <- sample(N)
@@ -14,7 +14,7 @@ treinamentoY <- x[1:81,5]#60% da amostra
 primeiraClassificacaoX <- x[82:135,2:4]
 primeiraClassificacaoY <- x[82:135,5]
 #configuracoes da MLP
-nNeuronios = 10
+nNeuronios = 12
 maxEpocas <- 20000
 
 #treinamento da MLP com 60% da amostra
@@ -29,7 +29,7 @@ redeCA<-mlp(treinamentoX, treinamentoY, size=nNeuronios, maxit=maxEpocas, initFu
             updateFuncParams=c(0), hiddenActFunc="Act_Logistic",
             shufflePatterns=F, linOut=TRUE)
 #PLOT DO ERRO
-plot(redeCA$IterativeFitError,type="l",main="Erro da MLP CA")
+plot(redeCA$IterativeFitError,type="l",main="Erro da MLP CA",xlab="Número de épocas",ylab = "Erro iterativo")
 
 #primeira classificação com 20% da amostra
 yhat <- predict(redeCA,primeiraClassificacaoX)
