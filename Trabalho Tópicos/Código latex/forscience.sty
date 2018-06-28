@@ -1,0 +1,77 @@
+%=================================================================================================
+% PACOTES PADR�O DA REVISTA
+%=================================================================================================
+\usepackage{hyperref}
+\usepackage[alf, abnt-emphasize=bf, abnt-repeated-author-omit=yes, abnt-missing-year=void, abnt-thesis-year=both]{abntex2cite}
+\usepackage{pslatex}  													
+\usepackage{lineno}															
+\usepackage{trivfloat}													
+
+
+
+\trivfloat{quadro} 
+
+\addto\captionsbrazil{
+\renewcommand{\bibname}{{\normalfont \textbf{{\normalsize REFER\^ENCIAS}}}} 
+}
+
+\captionnamefont{\ABNTEXfontereduzida}
+\captiontitlefont{\ABNTEXfontereduzida}
+
+
+
+%====================================================================================================================
+\usepackage{amssymb,latexsym, amsmath, color}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}  
+\usepackage[brazil]{babel}
+\usepackage{epsfig}
+\usepackage{indentfirst}        
+\usepackage{setspace}           
+\usepackage{verbatim}
+
+%====================================================================================================================
+
+\usepackage[a4paper,left=3.0cm,right=2.0cm,top=3.0cm,bottom=2.0cm, headsep=1.2cm]{geometry} 
+\setlength{\textwidth}{16cm}    
+\setlength{\textheight}{23.7cm}   
+\parindent=12.5mm                 
+	
+\SingleSpacing
+
+
+\setsecheadstyle{\bfseries \small} % reduz o tamanho das fontes geradas por \section, elas ficam equivalentes a 12 pt
+
+\setsubsecheadstyle{\bfseries\sethangfrom{\noindent ##1}\raggedright}
+\setbeforesubsecskip{-\onelineskip}
+\setaftersubsecskip{\onelineskip}
+
+%====================================================================================================================
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Modelo de artigo científico com abnTeX2},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+
+%=================================================================================================
+% TIPOS DE TEOREMAS
+%=================================================================================================
+\newtheorem{definicao}{Defini\c c\~{a}o}[section]
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}{Lema}[section]
+\newtheorem{corolario}{Corol\´{a}rio}
+\newtheorem{propriedade}{Propriedade}
+
+
