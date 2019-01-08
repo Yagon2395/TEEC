@@ -1,2 +1,2 @@
 # TEEC
-Tópicos especiai em engenharia de computação
+Tópicos especiais em engenharia de computação.
